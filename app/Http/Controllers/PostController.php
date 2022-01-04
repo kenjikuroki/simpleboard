@@ -12,7 +12,7 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function posts()
+    public function index()
     {
         $posts = Post::all();
 
