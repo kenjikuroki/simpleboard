@@ -43,6 +43,7 @@ class PostController extends Controller
         $post->save();
 
         return redirect()->route('posts.show', ['id' => $post->id])->with('message', 'Post was successfully created.');
+    
     }
 
     /**
@@ -55,7 +56,6 @@ class PostController extends Controller
     {
         return view('posts.show', compact('post'));
     }
-
 
     /**
      * Show the form for editing the specified resource.
@@ -82,6 +82,7 @@ class PostController extends Controller
         $post->save();
 
         return redirect()->route('posts.show', ['id' => $post->id])->with('message', 'Post was successfully updated.');
+   
     }
 
     /**
@@ -95,5 +96,6 @@ class PostController extends Controller
         $post->delete();
 
         return redirect()->route('posts.index');
+   
     }
 }
